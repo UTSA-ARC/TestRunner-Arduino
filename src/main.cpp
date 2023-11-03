@@ -7,6 +7,7 @@
 String inData, outData;
 int pendingCommand = 0;
 SampleData sensorData;
+// char c = 'd';
 
 
 
@@ -41,5 +42,7 @@ void loop() {
 
     // send measurement readings out to Pi though USB
     Serial.println(outData);
+
+    // serialEvent runs if input data is available
 }
 
