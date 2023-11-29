@@ -1,5 +1,15 @@
+#include <array>
+#include "params.h"
+
+using namespace std;
+
 struct SampleData {
-    float loadcellVal;
-    float transducerVal;
-    float thermocoupleVal;
+    array<float, NUM_LS> loadcellValues;
+    array<float, NUM_PT> transducerValues;
+    array<float, NUM_TC> thermocoupleValues;
 };
+
+// struct LS {
+//     int dataPin;
+//     int clkPin;
+// };

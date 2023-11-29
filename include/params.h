@@ -1,23 +1,35 @@
-// const int loadCell0 = A0; // Analog pin A0
-// const int loadCell1 = A1; // Analog pin A1
-// const int armRelay = 2; // Digital pin 2
-// const int ignitionRelay = 8; // Digital pin 8
-// const int armButton = 3;
-// const int ignitionButton = 4;
+#ifndef PARAMS_H
+#define PARAMS_H
 
-// output parameters
-#define ARM_RELAY 2
-#define IGNITION_RELAY 8
-#define LED 13 // for debugging
+// control pins (ignition and arm pins)
+#define ARMING_PIN 2
+#define IGNITION_PIN 8
 
-// input parameters
-// #define ARM_BUTTON 3
-// #define IGNITION_BUTTON 4
-#define LOADCELL0 A0 // analog
-#define LOADCELL1 A1 // analog
-#define TRANSDUCER 10
-#define THERMOCOUPLE 11
+// number of sensors | LS: load cell, PT: pressure transducer, TC: thermocouple
+#define NUM_LS 3
+#define NUM_PT 1
+#define NUM_TC 1
 
 #define LC_MAX_V 3.3
 #define TRANS_MAX_V 3.3
 #define TC_MAX_V 3.3
+
+// sensor data pin arrays
+const int ls_pins[NUM_LS] = {14, 15, 16};
+const int pt_pins[NUM_PT] = {10};
+const int tc_sdi_pins[NUM_TC] = {26};
+const int tc_sdo_pins[NUM_TC] = {1};
+
+const int tc_cs_pins[NUM_TC] = {0};
+
+// sensor clock pin arrays, all 13 for now but can change if needed
+const int ls_clk_pins[NUM_LS] = {13, 13, 13};
+const int pt_clk_pins[NUM_PT] = {13};
+const int tc_clk_pins[NUM_TC] = {27};
+
+// enter actual calibration values as needed
+const int ls_calibration_values[NUM_LS] = {100, 100, 100};
+const int pt_calibration_values[NUM_PT] = {100};
+const int tc_calibration_values[NUM_TC] = {100};
+
+#endif
