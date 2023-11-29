@@ -136,4 +136,6 @@ String convertToCSV(SampleData *data) {
 
     // remove last comma
     csvData.remove(csvData.length() - 1);
+
+    return csvData;
 }
