@@ -9,7 +9,7 @@ using namespace std;
 String inData, outData;
 int pendingCommand = 0;
 SampleData *sensorData;
-// char c = 'd';
+// String args[];
 
 
 // Teensy listens for control commands from RPi
@@ -31,7 +31,7 @@ void setup() {
     Serial.println("Pin setup beginning...");
     setupPins();
     Serial.println("Pin setup complete!");
-    Serial.println("-------------------------------------------"); 
+    Serial.println("-------------------------------------------");
 }
 
 void loop() {

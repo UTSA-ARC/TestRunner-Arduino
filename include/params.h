@@ -32,4 +32,19 @@ const int ls_calibration_values[NUM_LS] = {100, 100, 100};
 const int pt_calibration_values[NUM_PT] = {100};
 const int tc_calibration_values[NUM_TC] = {100};
 
+// sensor names
+#define LOADCELL "LS"
+#define TRANSDUCER "PT"
+#define THERMOCOUPLE "TC"
+
+// num of sensor types
+#define NUM_SENSOR_TYPES 3
+
+// error codes
+#define ERR_ANALOG_OUTPUT -1
+
+
+// data structure to hold process states
+
+
 #endif
